@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App 2021</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+              <h5 class="text-warning" id="about">PROGNOZA POGODY</h5>
+                <h1 class="text-light bg-warning" id="location"></h1>
+                <h4 class="text-warning" id="description"></h4>
+                <image id="icon">
+                <ul id="w-details" class="list-group mt-3">
+                    <li class="list-group-item" id="temperature"></li>
+                    <li class="list-group-item" id="feels-like"></li>
+                    <li class="list-group-item" id="sunrise"></li>
+                    <li class="list-group-item" id="sunset"></li>
+                </ul>
+                <hr>
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#locModal">
+                    Zmień miasto
+                  </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="locModal" tabindex="-1" aria-labelledby="locModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="locModalLabel">Wybierz miasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="w-form">
+              <div class="form-group">
+                  <label for="city">Miasto</label>
+                  <input type="text" id="city" class="form-control">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+          <button id="change-btn" type="button" class="btn btn-primary">Zapisz zmiany</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="code.js"></script>
+    <script src="apikey.js"></script>
+</body>
+</html>
